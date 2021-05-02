@@ -13,7 +13,6 @@
 
 #enable
 echo "performance" | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 #set nvme parameters
 echo 1 > /sys/block/nvme0n1/queue/io_poll

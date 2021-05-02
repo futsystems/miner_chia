@@ -2,9 +2,10 @@
   
 apt-get update
 
-apt install supervisor net-tools
+apt install supervisor net-tools sysfsutils
 apt install nvme-cli dstat sysstat glances smartmontools lm-sensors
 apt install dracut-core
+apt install sysbench
 snap install duf-utility
 
 
@@ -21,7 +22,8 @@ systemctl enable rc-local.service
 #endbale nvme
 rm -rf /etc/modprobe.d/nvme.conf
 ln -s /opt/src/nvme.conf /etc/modprobe.d/nvme.conf
-#update-initramfs -u
+
+update-initramfs -u
 
 
 
