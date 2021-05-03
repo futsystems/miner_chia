@@ -44,7 +44,7 @@ function init_drivers () {
       rm -rf /mnt/cache/00
       mkdir -p /mnt/cache/00
       echo '#inti-nvme1n1' >> /etc/fstab
-      echo '/dev/nvme0n1 /mnt/cache/00 xfs defaults,noatime,discard 0 0' >> /etc/fstab
+      echo '/dev/nvme1n1 /mnt/cache/01 xfs defaults,noatime,discard 0 0' >> /etc/fstab
     fi
   fi
   echo 'mount nvme to /mnt/cache'
