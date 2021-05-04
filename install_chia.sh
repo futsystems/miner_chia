@@ -21,7 +21,3 @@ else
   chia init
 fi
 
-
-
-
-

@@ -15,10 +15,7 @@ else
     . /opt/chia/chia-blockchain/venv/bin/activate
     cd /opt/chia/plotman
     python setup.py install
-    mkdir -p /root/.config/plotman/
-    rm -rf /root/.config/plotman/plotman.yaml
-    ln -s /opt/src/plotman.yaml /root/.config/plotman/plotman.yaml
-
+    
 	# install supervisor conf
 	ln -s /opt/src/supervisor/plot.conf /etc/supervisor/conf.d/plot.conf 
   else
@@ -28,3 +25,46 @@ fi
 
 
 
+
+plotman_config(){
+while true
+do
+#clear
+cat << EOF
+----------------------------------------
+|****Please Enter Your Choice:[0-9]****|
+----------------------------------------
+(1) 1nvme 2sata
+(2) 2nvme 4sata
+EOF
+read -p "Please enter your Choice[0-9]: " input2
+case "$input2" in
+  0)
+  clear
+  break 
+  ;;
+  1)
+  echo "1 nvme SDD with 2 sata HDD"
+  mkdir -p /root/.config/plotman/
+  rm -rf /root/.config/plotman/plotman.yaml
+  ln -s /opt/src/plotman/plotman.yaml.1nvme.2sata /root/.config/plotman/plotman.yaml
+  break
+  ;;
+  2)
+  echo "2 nvme SDD with 4 sata HDD"
+  ;;
+  *) echo "----------------------------------"
+     echo "|          Warning!!!            |"
+     echo "|   Please Enter Right Choice!   |"
+     echo "----------------------------------"
+     for i in `seq -w 3 -1 1`
+       do 
+         echo -ne "\b\b$i";
+  sleep 1;
+     done
+     clear
+esac
+done
+}
+
+plotman_config
