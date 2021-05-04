@@ -35,7 +35,8 @@ cat << EOF
 |****Please Enter Your Choice:[0-9]****|
 ----------------------------------------
 (1) 1nvme 2sata
-(2) 2nvme 4sata
+(2) Dell730xd(2nvme 1sata)
+(3) Dell730xd(2nvme 2sata)
 EOF
 read -p "Please enter your Choice[0-9]: " input2
 case "$input2" in
@@ -49,6 +50,19 @@ case "$input2" in
   rm -rf /root/.config/plotman/plotman.yaml
   ln -s /opt/src/plotman/plotman.yaml.1nvme.2sata /root/.config/plotman/plotman.yaml
   break
+  1)
+  echo "Config Dell730xd 2nvme 1sata"
+  mkdir -p /root/.config/plotman/
+  rm -rf /root/.config/plotman/plotman.yaml
+  ln -s /opt/src/plotman/plotman.yaml.dell730xd.2nvme.1sata /root/.config/plotman/plotman.yaml
+  break
+  1)
+  echo "Config Dell730xd 2nvme 2sata"
+  mkdir -p /root/.config/plotman/
+  rm -rf /root/.config/plotman/plotman.yaml
+  ln -s /opt/src/plotman/plotman.yaml.dell730xd.2nvme.2sata /root/.config/plotman/plotman.yaml
+  break
+
   ;;
   2)
   echo "2 nvme SDD with 4 sata HDD"
