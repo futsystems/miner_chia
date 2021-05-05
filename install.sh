@@ -7,7 +7,7 @@ apt install nvme-cli dstat sysstat glances smartmontools lm-sensors
 apt install dracut-core
 apt install sysbench p7zip-fulil
 apt install python3-virtualenv
-
+apt install pv
 snap install duf-utility
 
 
