@@ -50,20 +50,21 @@ case "$input2" in
   rm -rf /root/.config/plotman/plotman.yaml
   ln -s /opt/src/plotman/plotman.yaml.1nvme.2sata /root/.config/plotman/plotman.yaml
   break
-  1)
+  ;;
+  2)
   echo "Config Dell730xd 2nvme 1sata"
   mkdir -p /root/.config/plotman/
   rm -rf /root/.config/plotman/plotman.yaml
   ln -s /opt/src/plotman/plotman.yaml.dell730xd.2nvme.1sata /root/.config/plotman/plotman.yaml
   break
-  1)
+  ;;
+  3)
   echo "Config Dell730xd 2nvme 2sata"
   mkdir -p /root/.config/plotman/
   rm -rf /root/.config/plotman/plotman.yaml
   ln -s /opt/src/plotman/plotman.yaml.dell730xd.2nvme.2sata /root/.config/plotman/plotman.yaml
   break
-
-  ;;
+  ;
   2)
   echo "2 nvme SDD with 4 sata HDD"
   ;;
