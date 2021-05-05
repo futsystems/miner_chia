@@ -1,5 +1,10 @@
 #/bin/bash
-  
+
+if [ $# -eq 0 ]; then
+    echo "No arguments provided"
+    exit 1
+fi
+
 apt-get update
 
 apt install -y supervisor net-tools sysfsutils
@@ -16,7 +21,13 @@ rm -rf /etc/systemd/system/rc-local.service
 rm -rf /etc/rc.local
 
 ln -s /opt/src/rc-local.service /etc/systemd/system/rc-local.service
-ln -s /opt/src/rc.local /etc/rc.local
+if [ $1 == 'harvester' ]; then
+	ln -s /opt/src/rc.local.harvester /etc/rc.local
+fi
+
+if [ $1 == 'plotter' ]; then
+	ln -s /opt/src/rc.local /etc/rc.local
+fi
 
 systemctl enable rc-local.service
 
