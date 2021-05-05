@@ -5,7 +5,9 @@ apt-get update
 apt install supervisor net-tools sysfsutils
 apt install nvme-cli dstat sysstat glances smartmontools lm-sensors
 apt install dracut-core
-apt install sysbench p7zip-full
+apt install sysbench p7zip-fulil
+apt install python3-virtualenv
+
 snap install duf-utility
 
 
