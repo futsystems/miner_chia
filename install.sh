@@ -2,12 +2,12 @@
   
 apt-get update
 
-apt install supervisor net-tools sysfsutils
-apt install nvme-cli dstat sysstat glances smartmontools lm-sensors
-apt install dracut-core
-apt install sysbench p7zip-fulil
-apt install python3-virtualenv
-apt install pv
+apt install -y supervisor net-tools sysfsutils
+apt install -y nvme-cli dstat sysstat glances smartmontools lm-sensors
+apt install -y dracut-core
+apt install -y sysbench p7zip-fulil
+apt install -y python3-virtualenv
+apt install -y pv
 snap install duf-utility
 
 
@@ -25,10 +25,16 @@ git config --global user.email "miner@example.com"
 git config --global user.name "miner"
 
 #endbale nvme
-rm -rf /etc/modprobe.d/nvme.conf
-ln -s /opt/src/nvme.conf /etc/modprobe.d/nvme.conf
 
-update-initramfs -u
+if [ $(lsblk | grep --count 'nvme0') == '0' ];then
+  echo 'nvme not installed'
+else
+  echo 'nvme installed'
+  rm -rf /etc/modprobe.d/nvme.conf
+  ln -s /opt/src/nvme.conf /etc/modprobe.d/nvme.conf
+  update-initramfs -u
+fi
+
 
 
 
