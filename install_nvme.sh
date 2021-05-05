@@ -83,5 +83,15 @@ function add_to_startup () {  # NOT USED CURRENTLY
 }
 
 safety_first
+update-grub2
+
+# https://gist.github.com/trungnt13/d6632130c43db424d56f0d30247033ec enable scsi_mod.use_blk_mq
+sed -i 's/\(^GRUB_CMDLINE_LINUX_DEFAULT=\).*/\1"quiet splash nomodeset scsi_mod.use_blk_mq=1"/' grub
+update-grub2
+
+#enable trim script
+ln /opt/src/fstrim.sh /etc/etc/cron.weekly/fstrim.sh
+
+
 
 
