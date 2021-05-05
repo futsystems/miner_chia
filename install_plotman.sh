@@ -64,7 +64,7 @@ case "$input2" in
   rm -rf /root/.config/plotman/plotman.yaml
   ln -s /opt/src/plotman/plotman.yaml.dell730xd.2nvme.2sata /root/.config/plotman/plotman.yaml
   break
-  ;
+  ;;
   2)
   echo "2 nvme SDD with 4 sata HDD"
   ;;
