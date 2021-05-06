@@ -25,7 +25,7 @@ fi
 
 
 
-
+#update plotman config
 plotman_config(){
 while true
 do
@@ -34,6 +34,7 @@ cat << EOF
 ----------------------------------------
 |****Please Enter Your Choice:[0-9]****|
 ----------------------------------------
+(0) Do not update config
 (1) 1nvme 2sata
 (2) Dell730xd(2nvme 1sata)
 (3) Dell730xd(2nvme 2sata)
@@ -47,22 +48,22 @@ case "$input2" in
   1)
   echo "1 nvme SDD with 2 sata HDD"
   mkdir -p /root/.config/plotman/
-  rm -rf /root/.config/plotman/plotman.yaml
-  ln -s /opt/src/plotman/plotman.yaml.1nvme.2sata /root/.config/plotman/plotman.yaml
+  mv /root/.config/plotman/plotman.yaml root/.config/plotman/plotman.yaml.bak
+  cp /opt/src/plotman/plotman.yaml.1nvme.2sata /root/.config/plotman/plotman.yaml
   break
   ;;
   2)
   echo "Config Dell730xd 2nvme 1sata"
   mkdir -p /root/.config/plotman/
-  rm -rf /root/.config/plotman/plotman.yaml
-  ln -s /opt/src/plotman/plotman.yaml.dell730xd.2nvme.1sata /root/.config/plotman/plotman.yaml
+  mv /root/.config/plotman/plotman.yaml root/.config/plotman/plotman.yaml.bak
+  cp /opt/src/plotman/plotman.yaml.dell730xd.2nvme.1sata /root/.config/plotman/plotman.yaml
   break
   ;;
   3)
   echo "Config Dell730xd 2nvme 2sata"
   mkdir -p /root/.config/plotman/
-  rm -rf /root/.config/plotman/plotman.yaml
-  ln -s /opt/src/plotman/plotman.yaml.dell730xd.2nvme.2sata /root/.config/plotman/plotman.yaml
+  mv /root/.config/plotman/plotman.yaml root/.config/plotman/plotman.yaml.bak
+  cp /opt/src/plotman/plotman.yaml.dell730xd.2nvme.2sata /root/.config/plotman/plotman.yaml
   break
   ;;
   2)

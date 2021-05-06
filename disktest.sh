@@ -5,7 +5,7 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-apt-get install fio
+apt-get -y install fio
 
 SEQIODEPTH=8
 SEQIOSIZE=1m
