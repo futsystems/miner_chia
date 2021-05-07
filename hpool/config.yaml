@@ -9,7 +9,7 @@ deviceId: ""
 extraParams: {}
 log:
   lv: debug
-  path: 
+  path: ./log
   name: miner.log
 url:
   info: ""
