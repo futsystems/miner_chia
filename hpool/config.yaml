@@ -1,0 +1,21 @@
+token: ""
+path:
+- /mnt/dst/00
+- /mnt/dst/01
+minerName: plot1
+apiKey: 80d7e99d-2459-4887-97d2-b5e6120f0a6e
+cachePath: ""
+deviceId: ""
+extraParams: {}
+log:
+  lv: debug
+  path: 
+  name: miner.log
+url:
+  info: ""
+  submit: ""
+  line: ""
+scanPath: true
+scanMinute: 60
+debug: ""
+language: ""
