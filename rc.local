@@ -22,7 +22,7 @@ echo 0 > /sys/block/nvme0n1/queue/io_poll_delay
 touch /home/user/`date +%Y-%m-%d`.log
 
 #prepare dst
-/opt/src/install_dst.sh
+/opt/src/install_plotter_driver.sh
 
 #clean cache
 rm -rf /mnt/cache/00/*

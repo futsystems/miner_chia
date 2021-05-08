@@ -90,7 +90,7 @@ sed -i 's/\(^GRUB_CMDLINE_LINUX_DEFAULT=\).*/\1"quiet splash nomodeset scsi_mod.
 update-grub2
 
 #enable trim script
-ln /opt/src/fstrim.sh /etc/etc/cron.weekly/fstrim.sh
+ln /opt/src/fstrim.sh /etc/cron.weekly/fstrim.sh
 
 
 
