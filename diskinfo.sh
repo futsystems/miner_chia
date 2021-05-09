@@ -13,6 +13,7 @@ do
     cmd2="/sys/block/$device/queue/io_poll_delay "
   	echo "$device" io_pool:$(cat $cmd1), io_poll_delay:$(cat $cmd2)
 	echo $(lsblk | grep $device)
+   nvme smart-log /dev/$device
   fi
 done
 
