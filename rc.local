@@ -25,6 +25,12 @@ touch /home/user/`date +%Y-%m-%d`.log
 /opt/src/install_plotter_driver.sh
 
 #clean cache
-rm -rf /mnt/cache/00/*
+paths=$(ls /mnt/cache/)
+for path in $paths
+do
+ echo $path
+	echo 'clean cache path:'$path
+	rm -rf /mnt/cache/$path/*
+done
 
 exit 0
