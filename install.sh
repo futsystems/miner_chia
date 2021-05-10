@@ -13,6 +13,7 @@ apt install -y dracut-core
 apt install -y sysbench p7zip-fulil
 apt install -y python3-virtualenv
 apt install -y pv
+apt install -y wipe
 snap install duf-utility
 
 
@@ -22,11 +23,11 @@ rm -rf /etc/rc.local
 
 ln -s /opt/src/rc-local.service /etc/systemd/system/rc-local.service
 if [ $1 == 'harvester' ]; then
-	ln -s /opt/src/rc.local.harvester /etc/rc.local
+	ln -s /opt/src/rc.local/rc.local.harvester /etc/rc.local
 fi
 
 if [ $1 == 'plotter' ]; then
-	ln -s /opt/src/rc.local /etc/rc.local
+	ln -s /opt/src/rc.local/rc.local.plotter /etc/rc.local
 fi
 
 systemctl enable rc-local.service
