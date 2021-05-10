@@ -83,14 +83,15 @@ function add_to_startup () {  # NOT USED CURRENTLY
 }
 
 safety_first
-update-grub2
 
+echo "Chnage linux kernel args"
 # https://gist.github.com/trungnt13/d6632130c43db424d56f0d30247033ec enable scsi_mod.use_blk_mq
-sed -i 's/\(^GRUB_CMDLINE_LINUX_DEFAULT=\).*/\1"quiet splash nomodeset scsi_mod.use_blk_mq=1"/' grub
+sed -i 's/\(^GRUB_CMDLINE_LINUX_DEFAULT=\).*/\1"quiet splash nomodeset scsi_mod.use_blk_mq=1"/' /etc/default/grub
 update-grub2
 
 #enable trim script
-ln /opt/src/fstrim.sh /etc/cron.weekly/fstrim.sh
+echo "ln fstrim.sh into weekly cron"
+ln -f /opt/src/fstrim.sh /etc/cron.weekly/fstrim.sh
 
 
 
