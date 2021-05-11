@@ -10,7 +10,6 @@ remote_port = 22001
 
 
 [api_plotter-xxx]
-type = tcp
+type = http
 local_ip = 127.0.0.1
-local_port = 22
-remote_port = 18001
+custom_domains = xxx.gateway.marvelsystem.net
