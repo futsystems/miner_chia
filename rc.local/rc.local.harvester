@@ -16,6 +16,6 @@
 touch /home/user/`date +%Y-%m-%d`.log
 
 #prepare dst
-bash /opt/src/install_harvester_driver.sh
+bash /opt/src/driver/harvester_driver.sh
 
 exit 0
