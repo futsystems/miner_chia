@@ -13,7 +13,7 @@ wget -O - https://packages.icinga.com/icinga.key | apt-key add -
 
 apt-get update
 
-apt-get install icinga2
+apt-get -y install icinga2
 
 # ln commands
 rm -rf /etc/icinga2/features-enabled/commands.conf
