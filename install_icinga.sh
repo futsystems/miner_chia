@@ -15,4 +15,7 @@ apt-get update
 
 apt-get install icinga2
 
+# ln commands
+ln -s /opt/src/icinga2/commands.conf commands.conf
+
 icinga2 node wizard

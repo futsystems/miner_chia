@@ -26,15 +26,15 @@ export LC_ALL=C
 #
 
 USAGE="Usage: check_nvme.sh -d <device>"
-DISK="/dev/nvme0n1"
+DISK=/dev/nvme0n1
 
-#while getopts ":d:" OPTS; do
-#  case $OPTS in
-#    d) DISK="$OPTARG";;
-#    *) echo "$USAGE"
-#       exit 3;;
-#  esac
-#done
+while getopts ":d:" OPTS; do
+  case $OPTS in
+    d) DISK="$OPTARG";;
+    *) echo "$USAGE"
+       exit 3;;
+  esac
+done
 
 if [ -z "$DISK" ]
 then
