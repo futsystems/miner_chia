@@ -18,4 +18,10 @@ apt-get -y install icinga2
 # ln commands
 ln -s /opt/src/icinga2/commands.conf /etc/icinga2/features-enabled/commands.conf
 
-icinga2 node wizard
+# set visudo
+if ! grep -q '# Nagios' ; then
+    echo '# Nagios' | sudo EDITOR='tee -a' visudo
+	echo 'nagios ALL=(root) NOPASSWD: /opt/src/icinga2/futs_check_nvme.sh' | sudo EDITOR='tee -a' visudo
+fi
+
+#icinga2 node wizard
