@@ -13,13 +13,15 @@ wget -O - https://packages.icinga.com/icinga.key | apt-key add -
 
 apt-get update
 
-apt-get install icinga2
+apt-get -y install icinga2
 
 # ln commands
-ln -s /opt/src/icinga2/commands.conf /etc/icinga2/features-enabled/commands.conf
+rm -rf /etc/icinga2/features-enabled/commands.conf
+ln  -s /opt/src/icinga2/commands.conf /etc/icinga2/features-enabled/commands.conf
 
 # set visudo
-if ! grep -q '# Nagios' ; then
+if ! grep -q '# Nagios'  /etc/sudoers; then
+	echo "edit visudo"
     echo '# Nagios' | sudo EDITOR='tee -a' visudo
 	echo 'nagios ALL=(root) NOPASSWD: /opt/src/icinga2/futs_check_nvme.sh' | sudo EDITOR='tee -a' visudo
 fi
