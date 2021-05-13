@@ -6,7 +6,7 @@ if [ $# -eq 0 ]; then
 fi
 
 echo "======== Install Frpc ========"
-./install_frpc.sh
+./install_frp.sh
 
 echo "======== Install Components ========"
 ./install_component.sh $1
@@ -31,7 +31,7 @@ fi
 echo "======== Prepare Config ========"
 sleep 5
 echo "  -- frpc config"
-wget http://127.0.0.1:8080/config/frpc -O /opt/frpc/frpc.ini
+wget http://127.0.0.1:8080/config/frpc -O /opt/frp/frpc.ini
 
 
 echo "====== Stand By, Will Reboot========"
