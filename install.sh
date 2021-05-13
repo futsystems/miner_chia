@@ -38,5 +38,10 @@ echo "  -- plotman config"
 mkdir -p /root/.config/plotman/
 wget http://127.0.0.1:8080/config/plotman -O /root/.config/plotman/plotman.yaml
 
+echo "======== Install Hpool========"
+./install_hpool.sh
+
+echo "======== Install Icinga2 ========"
+./install_icinga2.sh
 echo "====== Stand By, Will Reboot========"
 sleep 5
