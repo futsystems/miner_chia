@@ -22,6 +22,7 @@ fi
 if [ $1 == 'plotter' ]; then
 	echo "======== Install Plotter ========"
 	./install_nvme.sh
+	./driver/plotter_driver.sh
 	./install_plotman.sh
 	./install_api_plotter.sh
 	
