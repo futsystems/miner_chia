@@ -33,6 +33,9 @@ sleep 5
 echo "  -- frpc config"
 wget http://127.0.0.1:8080/config/frpc -O /opt/frp/frpc.ini
 
+echo "  -- plotman config"
+mkdir -p /root/.config/plotman/
+wget http://127.0.0.1:8080/config/plotman -O /root/.config/plotman/plotman.yaml
 
 echo "====== Stand By, Will Reboot========"
 sleep 5
