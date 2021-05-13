@@ -13,7 +13,7 @@ if [ -d "/opt/chia/chia-blockchain" ]; then
 else
   ###  Control will jump here if $DIR does NOT exists ###
   echo "****** Install chia ******"
-  git config --global http.proxy http://access.futsystems.com:8888
+  git config --global http.proxy http://miner:xyz123456@access.futsystems.com:8888
   git clone https://github.com/Chia-Network/chia-blockchain.git -b latest
   cd /opt/chia/chia-blockchain
   sh install.sh
