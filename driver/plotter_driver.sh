@@ -15,7 +15,7 @@ for device in $device_list
    if [[ $device == sd* ]]; then
 	    disksize=$(lsblk -b --output SIZE -n -d /dev/$device)
 	  disksizeT=`expr $disksize / 1000 / 1000 / 1000 / 1000`
-      if [ $disksizeT -gt 5 ]; then
+      if [ $disksizeT -gt 4 ]; then
          echo "======Disk"$counter":$device Size:"$disksizeT"T======"
 		 #get disk information or format it as ext4
          blkid TYPE=ext4 /dev/$device || mkfs.ext4 -m 0 -T largefile4 -L plotdisk /dev/$device
