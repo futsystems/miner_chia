@@ -33,6 +33,7 @@ echo "======== Prepare Config ========"
 sleep 5
 echo "  -- frpc config"
 wget http://127.0.0.1:8080/config/frpc -O /opt/frp/frpc.ini
+supervisorctl restart srv.frpc
 
 echo "  -- plotman config"
 mkdir -p /root/.config/plotman/
