@@ -1,5 +1,10 @@
 #!/bin/bash
 
+###############################################
+# Update System script, Plotter, NAS service 
+#
+###############################################
+
 if [ -d "/opt/src" ]; then
 	echo "======== Update System ========"
 	cd /opt/src
@@ -21,8 +26,10 @@ if [ -d "/opt/src" ]; then
 		git pull
 		supervisorctl restart api.nas
 	fi
+	exit 0
 else
 	echo "/opt/src do not exist, please install first"
+	exit 1
 fi
 
 
