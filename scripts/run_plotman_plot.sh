@@ -12,7 +12,17 @@ echo 'api.plotter started.'
 echo 'generate plotman config from api.plotter'
 wget http://127.0.0.1:8080/config/plotman -O /root/.config/plotman/plotman.yaml
 
-echo 'run plotman plot '
-/opt/src/scripts/runinenv.sh /opt/chia/chia-blockchain/venv plotman plot
+
+is_plotting_run=$(curl http://127.0.0.1:8080/config/plotman/is_plotting_run)
+
+if [ $is_plotting_run == 1 ];then
+        echo 'run plotman plot '
+	/opt/src/scripts/runinenv.sh /opt/chia/chia-blockchain/venv plotman plot
+else
+        echo 'plotter is set not running, just exit'
+	sleep 5
+	exit
+fi
+
 
 
