@@ -18,6 +18,11 @@ for device in $device_list
 		#mount disk
 		mkdir -p /mnt/plots/driver$counter
 		mount /dev/$device /mnt/plots/driver$counter
+		
+		echo "clean bad plot files"
+		cd /mnt/plots/driver$counter
+		find . -name "*" -type f -size 0c | xargs -n 1 rm -f
+
 		counter=$((counter+1))
       fi
    fi

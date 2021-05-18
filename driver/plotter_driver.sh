@@ -23,6 +23,11 @@ for device in $device_list
 		mkdir -p /mnt/dst/0$counter
 		mount /dev/$device /mnt/dst/0$counter
 		#echo 'mkdir -p /mnt/dst/0'$counter
+		
+		echo "clean bad plot files"
+		cd /mnt/dst/0$counter
+		find . -name "*" -type f -size 0c | xargs -n 1 rm -f
+		
 		counter=$((counter+1))
       fi
    fi
