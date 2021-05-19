@@ -16,6 +16,7 @@ echo "======== Install Chia ========"
 
 if [ $1 == 'harvester' ]; then
 	echo "======== Install Harvester ========"
+	./drviver/harvester_driver.sh
 	./install_api_harvester.sh
 fi
 
@@ -35,9 +36,11 @@ echo "  -- frpc config"
 wget http://127.0.0.1:8080/config/frpc -O /opt/frp/frpc.ini
 supervisorctl restart srv.frpc
 
-echo "  -- plotman config"
-mkdir -p /root/.config/plotman/
-wget http://127.0.0.1:8080/config/plotman -O /root/.config/plotman/plotman.yaml
+if [ $1 == 'plotter' ]; then
+	echo "  -- plotman config"
+	mkdir -p /root/.config/plotman/
+	wget http://127.0.0.1:8080/config/plotman -O /root/.config/plotman/plotman.yaml
+fi
 
 echo "======== Install Hpool========"
 ./install_hpool.sh
