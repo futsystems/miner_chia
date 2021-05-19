@@ -39,11 +39,11 @@ echo "  -- plotman config"
 mkdir -p /root/.config/plotman/
 wget http://127.0.0.1:8080/config/plotman -O /root/.config/plotman/plotman.yaml
 
-echo "  -- hpool config"
-wget http://127.0.0.1:8080/config/hpool -O /opt/hpool/config.yaml
-
 echo "======== Install Hpool========"
 ./install_hpool.sh
+
+echo "  -- hpool config"
+wget http://127.0.0.1:8080/config/hpool -O /opt/hpool/config.yaml
 
 echo "======== Install Icinga2 ========"
 ./install_icinga2.sh
