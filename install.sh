@@ -16,7 +16,7 @@ echo "======== Install Chia ========"
 
 if [ $1 == 'harvester' ]; then
 	echo "======== Install Harvester ========"
-	./drviver/harvester_driver.sh
+	./driver/harvester_driver.sh
 	./install_api_harvester.sh
 fi
 
