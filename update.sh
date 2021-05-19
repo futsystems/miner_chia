@@ -19,12 +19,12 @@ if [ -d "/opt/src" ]; then
 		supervisorctl restart api.plotter
 	fi
 
-	if [ -d "/opt/nas/bin" ]; then
+	if [ -d "/opt/harvester/bin" ]; then
 		echo "======== Update NAS API ========"
-		cd /opt/nas/bin
+		cd /opt/harvester/bin
 		git reset --hard
 		git pull
-		supervisorctl restart api.nas
+		supervisorctl restart api.harvester
 	fi
 	exit 0
 else
