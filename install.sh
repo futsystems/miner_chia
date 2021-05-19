@@ -29,9 +29,18 @@ if [ $1 == 'plotter' ]; then
 	
 fi
 
+echo "======== Install Hpool========"
+./install_hpool.sh
+
+# Wait until api.plotter started and listens on port 8080.
+while [ -z "`netstat -tln | grep 8080`" ]; do
+  echo 'Waiting for api service to start ...'
+  sleep 1
+done
+echo 'api service started.'
+
 
 echo "======== Prepare Config ========"
-sleep 5
 echo "  -- frpc config"
 wget http://127.0.0.1:8080/config/frpc -O /opt/frp/frpc.ini
 supervisorctl restart srv.frpc
@@ -40,15 +49,15 @@ if [ $1 == 'plotter' ]; then
 	echo "  -- plotman config"
 	mkdir -p /root/.config/plotman/
 	wget http://127.0.0.1:8080/config/plotman -O /root/.config/plotman/plotman.yaml
+	supervisorctl restart srv.plot
 fi
-
-echo "======== Install Hpool========"
-./install_hpool.sh
 
 echo "  -- hpool config"
 wget http://127.0.0.1:8080/config/hpool -O /opt/hpool/config.yaml
+supervisorctl restart srv.hpool
 
 echo "======== Install Icinga2 ========"
 ./install_icinga2.sh
+
 echo "====== Stand By, Will Reboot========"
 sleep 5
