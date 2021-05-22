@@ -16,6 +16,8 @@ if [ -d "/opt/src" ]; then
 		cd /opt/plotter/bin
 		git reset --hard
 		git pull
+		source venv/bin/activate
+		pip install -r requirement.txt
 		supervisorctl restart api.plotter
 	fi
 
