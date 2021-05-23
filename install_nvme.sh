@@ -16,6 +16,7 @@ clear_nvme()
 {
 	if grep -q 'init-md' /etc/fstab ; then
 		sed -i '/md/d' /etc/fstab
+		sed -i '/md/d' /etc/mdadm/mdadm.conf 
 		for device in $device_list
 		do
  			if [[ $device == md* ]]; then
@@ -30,6 +31,8 @@ clear_nvme()
 				mdadm --zero-superblock /dev/$device
   			fi
 		done
+		# clean mdadm config
+		cat /dev/null > /etc/mdadm/mdadm.conf
 	fi
 
 	if grep -q 'init-nvme' /etc/fstab ; then
@@ -77,6 +80,7 @@ ssd_raid(){
       			echo '#init-md0' >> /etc/fstab
 				echo '/dev/md0 /mnt/cache/00 xfs defaults,noatime,discard 0 0' >> /etc/fstab
     	fi
+	mdadm -Ds >> /etc/mdadm/mdadm.conf
 
 }
 
@@ -127,8 +131,10 @@ done
 
 if [[ $total_nvme_cnt > 1 ]]; then
 	multiple_ssd
-
 fi
+
+update-initramfs -u
+
 
 
 echo "====Mout Nvme Disk===="
