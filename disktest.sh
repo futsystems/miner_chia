@@ -11,7 +11,7 @@ SEQIODEPTH=8
 SEQIOSIZE=1m
 SEQJOBS=10
 RUNTIME=60
-FILESIZE=1G
+FILESIZE=10G
 
 fio -filename=$1/test.img -size=$FILESIZE -direct=1 -iodepth=$SEQIODEPTH -thread -rw=read -ioengine=libaio -bs=$SEQIOSIZE -numjobs=$SEQJOBS -name="SSD Seq Read Test" -group_reporting -runtime=$RUNTIME
 
