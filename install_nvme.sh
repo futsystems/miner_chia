@@ -131,6 +131,8 @@ done
 
 if [[ $total_nvme_cnt > 1 ]]; then
 	multiple_ssd
+else
+    ssd_alone
 fi
 
 update-initramfs -u
