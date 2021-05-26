@@ -29,6 +29,13 @@ if [ -d "/opt/src" ]; then
 		supervisorctl restart api.harvester
 	fi
 	exit 0
+
+	if [ -d "/opt/hpool" ]; then
+                echo "======== Update Hpool ========"
+		supervisorctl update srv.hpool
+        fi
+        exit 0
+
 else
 	echo "/opt/src do not exist, please install first"
 	exit 1

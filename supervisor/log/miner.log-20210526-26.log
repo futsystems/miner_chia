@@ -1,0 +1,13 @@
+time="2021-05-26T09:34:02Z" level=info msg="Logger Configuration." fields.level=debug file=loggers.go func=logging.Init line=121 path=./log
+time="2021-05-26T09:34:02Z" level=info msg="pool public key: af611c57169eb54c19563ad2208c6b44ea364d3cd8b1eea2f8ed5706196f4636e1a7fa91001c244f1308cabb10ebf364" file=loggers.go func=logging.CPrint line=168 tid=58
+time="2021-05-26T09:34:03Z" level=info msg="switch line" chain=CHIA file=loggers.go func=logging.CPrint line=168 tid=1 type=ws
+time="2021-05-26T09:34:04Z" level=info msg="init server" file=loggers.go func=logging.CPrint line=168 tid=181 type=ws url="ws://chia-sz1.hpool.com/x-proxynode/ws"
+time="2021-05-26T09:34:04Z" level=info msg="connect success" file=loggers.go func=logging.CPrint line=168 tid=181 url="ws://chia-sz1.hpool.com/x-proxynode/ws"
+time="2021-05-26T09:34:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=56
+time="2021-05-26T09:34:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-26T09:34:04Z" level=info msg="new mining info" capacity="13.17 TB" file=loggers.go func=logging.CPrint height=338637 jobId=2332201476 line=168 scan consume=0 scan time="1970-01-01 00:00:00" tid=141
+time="2021-05-26T09:34:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-26T09:34:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=65
+time="2021-05-26T09:34:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=62
+time="2021-05-26T09:34:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=59
+time="2021-05-26T09:34:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=68
