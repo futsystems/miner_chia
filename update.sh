@@ -32,6 +32,7 @@ if [ -d "/opt/src" ]; then
 
 	if [ -d "/opt/hpool" ]; then
                 echo "======== Update Hpool ========"
+		cp -rf /opt/src/hpool/hpool-miner-chia /opt/hpool-miner-chia
 		supervisorctl update srv.hpool
         fi
         exit 0
