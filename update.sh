@@ -28,7 +28,6 @@ if [ -d "/opt/src" ]; then
 		git pull
 		supervisorctl restart api.harvester
 	fi
-	exit 0
 
 	if [ -d "/opt/hpool" ]; then
                 echo "======== Update Hpool ========"
