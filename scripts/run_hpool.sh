@@ -13,6 +13,7 @@ echo 'generate hpool  config from api.plotter'
 wget http://127.0.0.1:8080/config/hpool -O /opt/hpool/config.yaml
 
 #start hpool
+cd /opt/hpool
 /opt/hpool/hpool-miner-chia -config /opt/hpool/config.yaml
 
 

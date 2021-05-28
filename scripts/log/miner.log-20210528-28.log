@@ -1,0 +1,142 @@
+time="2021-05-28T09:33:58Z" level=info msg="Logger Configuration." fields.level=debug file=loggers.go func=logging.Init line=121 path=./log
+time="2021-05-28T09:33:59Z" level=info msg="switch line" chain=CHIA file=loggers.go func=logging.CPrint line=168 tid=1 type=ws
+time="2021-05-28T09:34:00Z" level=info msg="init server" file=loggers.go func=logging.CPrint line=168 tid=127 type=ws url="ws://chia-sz1.hpool.com/x-proxynode/ws"
+time="2021-05-28T09:34:00Z" level=info msg="connect success" file=loggers.go func=logging.CPrint line=168 tid=127 url="ws://chia-sz1.hpool.com/x-proxynode/ws"
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=41
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=3
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=6
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:34:00Z" level=info msg="new mining info" capacity="29.11 TB" file=loggers.go func=logging.CPrint height=348299 jobId=3008268796 line=168 scan consume=0 scan time="1970-01-01 00:00:00" tid=228
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=12
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=62
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=35
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=59
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=9
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=56
+time="2021-05-28T09:34:00Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=47
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=12
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=2 file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=2 file=loggers.go func=logging.CPrint line=174 tid=56
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=3
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=41
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=6
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=2 file=loggers.go func=logging.CPrint line=174 tid=35
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=59
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=47
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=9
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=62
+time="2021-05-28T09:34:04Z" level=info msg="new mining info" capacity="99.91 TB" file=loggers.go func=logging.CPrint height=348299 jobId=2667599260 line=168 scan consume=0 scan time="2021-05-28 09:34:00" tid=228
+time="2021-05-28T09:34:04Z" level=debug msg="scale file /mnt/plots/driver9/plot-k32-2021-05-14-16-52-45bcab867c33164fba59f3e9f77c0ded1103bea5aed1d65369ced5f5c2767d3f.plot qualities count 0 consume 35" file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:34:04Z" level=debug msg=scanner consume=35 file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:34:10Z" level=info msg="pool public key: af611c57169eb54c19563ad2208c6b44ea364d3cd8b1eea2f8ed5706196f4636e1a7fa91001c244f1308cabb10ebf364" file=loggers.go func=logging.CPrint line=168 tid=46
+time="2021-05-28T09:34:10Z" level=error msg="add plot file" error="invalid plot file format" f7="{loggers.go,logging.CPrint,156}" f8="{plotterSpace.go,chia.(*PlotterSpace).Load,173}" f9="{asm_amd64.s,runtime.goexit,1371}" file=/mnt/plots/driver14/plot-k32-2021-05-27-17-47-cafc3f2bb5cda4a2151c21eb9f484ce9f7d191bef7ec0222d3e1afcaac022c89.plot tid=8
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=9
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=56
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=59
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=47
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=41
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=62
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=3
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=35
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=12
+time="2021-05-28T09:34:11Z" level=info msg="new mining info" capacity="209.63 TB" file=loggers.go func=logging.CPrint height=348299 jobId=1656441154 line=168 scan consume=0 scan time="2021-05-28 09:34:04" tid=228
+time="2021-05-28T09:34:11Z" level=debug msg="scale file /mnt/plots/driver14/plot-k32-2021-05-25-22-45-7e6da6569f859efb31274af5b9a1058698509c8cf3cbf61006e901da084f2695.plot qualities count 0 consume 13" file=loggers.go func=logging.CPrint line=174 tid=6
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=14 file=loggers.go func=logging.CPrint line=174 tid=6
+time="2021-05-28T09:34:11Z" level=debug msg="scale file /mnt/plots/driver1/plot-k32-2021-05-23-11-57-878f7795469915fe812b84bd25226b0cf73d5612db3fe8d2e65a6967d13f0a53.plot qualities count 1 consume 60" file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:11Z" level=debug msg=scanner consume=60 file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:12Z" level=debug msg="scale file /mnt/plots/driver4/plot-k32-2021-05-23-19-59-e1e96166406070a68ca49703391880abb1f502bba773fe4b49dba9da32be3748.plot qualities count 4 consume 167" file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:12Z" level=debug msg="scale file /mnt/plots/driver4/plot-k32-2021-05-25-11-30-4cfd94172ea021060f67aaa021bff2ddd3af71ae3eaabd230e31375769738479.plot qualities count 1 consume 67" file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:12Z" level=debug msg=scanner consume=236 file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=6
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=35
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=9
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=59
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=56
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=3
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=41
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=62
+time="2021-05-28T09:34:20Z" level=info msg="new mining info" capacity="209.63 TB" file=loggers.go func=logging.CPrint height=348299 jobId=1032780777 line=168 scan consume=236 scan time="2021-05-28 09:34:11" tid=228
+time="2021-05-28T09:34:20Z" level=debug msg="scale file /mnt/plots/driver1/plot-k32-2021-05-16-18-48-b48acead7a16695e5c92b6e8d51a7bc881478c1bed8f21f9012b5db6fa65691c.plot qualities count 0 consume 14" file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=15 file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:20Z" level=debug msg="scale file /mnt/plots/driver10/plot-k32-2021-05-11-16-16-727180e05d90af1442b7dabb6621046f84de6cb8d26a15139c457d7d664a7182.plot qualities count 0 consume 32" file=loggers.go func=logging.CPrint line=174 tid=12
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=32 file=loggers.go func=logging.CPrint line=174 tid=12
+time="2021-05-28T09:34:20Z" level=debug msg="scale file /mnt/plots/driver11/plot-k32-2021-05-12-03-56-f2b3380064ca7da5b284726ab835d3963ee4f6a17e3cea11e7ffa1e0a2de1471.plot qualities count 1 consume 74" file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:20Z" level=debug msg="scale file /mnt/plots/driver0/plot-k32-2021-05-17-20-08-86a41c16689fa054f54dceb6e30c84e31f1fad93c49a41d278cabf6f82db6eb2.plot qualities count 1 consume 74" file=loggers.go func=logging.CPrint line=174 tid=47
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=75 file=loggers.go func=logging.CPrint line=174 tid=47
+time="2021-05-28T09:34:20Z" level=debug msg="scale file /mnt/plots/driver2/plot-k32-2021-05-18-20-18-ca09ac40bf8c6cabfb6228bb0c4cda96f7006bcb67a4777b6752b1d9d88ca53f.plot qualities count 1 consume 79" file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=80 file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-28T09:34:20Z" level=debug msg="scale file /mnt/plots/driver11/plot-k32-2021-05-13-19-44-c7c473d39111ca05d2310cd036a0d6d255a902e6c61af2b40aa30f5e9cb6b04c.plot qualities count 1 consume 66" file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:20Z" level=debug msg=scanner consume=140 file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=3
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=59
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=35
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=47
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=9
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=12
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=6
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=56
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=62
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=41
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:32Z" level=info msg="new mining info" capacity="209.63 TB" file=loggers.go func=logging.CPrint height=348300 jobId=3808755214 line=168 scan consume=236 scan time="2021-05-28 09:34:20" tid=228
+time="2021-05-28T09:34:32Z" level=debug msg="scale file /mnt/plots/driver9/plot-k32-2021-05-21-00-40-e7d601162582b93e3b805f3ddcfa60065764205022012a4192e52520a93045a0.plot qualities count 0 consume 22" file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=23 file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:34:32Z" level=debug msg="scale file /mnt/plots/driver1/plot-k32-2021-05-14-17-31-f6d24aa24acc2482b2e74a6f7014266a663403a499b9a46487b53cd01581540d.plot qualities count 1 consume 61" file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=62 file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:32Z" level=debug msg="scale file /mnt/plots/driver2/plot-k32-2021-05-22-01-19-bc7578c703732893cfedcc072cabd8a8edff65725cf5c99863e0b15fb0bc4309.plot qualities count 2 consume 95" file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-28T09:34:32Z" level=debug msg=scanner consume=96 file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=41
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=35
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=12
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=47
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=3
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=62
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=56
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:34:40Z" level=info msg="new mining info" capacity="209.63 TB" file=loggers.go func=logging.CPrint height=348300 jobId=1971205661 line=168 scan consume=236 scan time="2021-05-28 09:34:32" tid=228
+time="2021-05-28T09:34:40Z" level=debug msg="scale file /mnt/plots/driver12/plot-k32-2021-05-20-08-59-8a31896236cd17b34f753353654da6257394517954e4862eb917d8b62d26637e.plot qualities count 0 consume 18" file=loggers.go func=logging.CPrint line=174 tid=9
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=18 file=loggers.go func=logging.CPrint line=174 tid=9
+time="2021-05-28T09:34:40Z" level=debug msg="scale file /mnt/plots/driver8/plot-k32-2021-05-11-19-05-6f4782674b5844e5cf281715043b0e8320939473f5ab0a3e6183419d4fc2c72f.plot qualities count 0 consume 24" file=loggers.go func=logging.CPrint line=174 tid=59
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=25 file=loggers.go func=logging.CPrint line=174 tid=59
+time="2021-05-28T09:34:40Z" level=debug msg="scale file /mnt/plots/driver11/plot-k32-2021-05-12-18-26-7efdc9b1e6453f82de08b9826766798eb5d62fbe256891856377ab31f7760c57.plot qualities count 1 consume 78" file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=78 file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:40Z" level=debug msg="scale file /mnt/plots/driver14/plot-k32-2021-05-16-12-25-0747990ba451ca9c45c3fd4bee647cb3c157c33fc01b4777c538450e902490a0.plot qualities count 3 consume 140" file=loggers.go func=logging.CPrint line=174 tid=6
+time="2021-05-28T09:34:40Z" level=debug msg=scanner consume=142 file=loggers.go func=logging.CPrint line=174 tid=6
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=44
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=59
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=3
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=12
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=53
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=6
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=35
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=50
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=56
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=1 file=loggers.go func=logging.CPrint line=174 tid=41
+time="2021-05-28T09:34:52Z" level=info msg="new mining info" capacity="209.63 TB" file=loggers.go func=logging.CPrint height=348300 jobId=2981219654 line=168 scan consume=236 scan time="2021-05-28 09:34:40" tid=228
+time="2021-05-28T09:34:52Z" level=debug msg="scale file /mnt/plots/driver12/plot-k32-2021-05-22-13-48-ad4f2cd9c66727adda0a5c8ae36a376fb42fc4f9318ee9b2a8a3a6d73525ecf8.plot qualities count 0 consume 13" file=loggers.go func=logging.CPrint line=174 tid=9
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=15 file=loggers.go func=logging.CPrint line=174 tid=9
+time="2021-05-28T09:34:52Z" level=debug msg="scale file /mnt/plots/driver4/plot-k32-2021-05-15-01-48-246a2ede2be2600070c0f713e7feef5ecdcdf2934dba2706c1e0c3b7e6b1f532.plot qualities count 0 consume 24" file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=25 file=loggers.go func=logging.CPrint line=174 tid=38
+time="2021-05-28T09:34:52Z" level=debug msg="scale file /mnt/plots/driver6/plot-k32-2021-05-23-11-05-9f5bed6f082e06a74a27f018e59ee284c8ed1aa19bda2cfaa17da56ce0afdbb7.plot qualities count 0 consume 27" file=loggers.go func=logging.CPrint line=174 tid=62
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=28 file=loggers.go func=logging.CPrint line=174 tid=62
+time="2021-05-28T09:34:52Z" level=debug msg="scale file /mnt/plots/driver0/plot-k32-2021-05-19-11-42-39d0a5c1d88d80fa7a149ae9c7ebcd49e1f1ceb7a29358b4d320dbeabb560442.plot qualities count 1 consume 64" file=loggers.go func=logging.CPrint line=174 tid=47
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=65 file=loggers.go func=logging.CPrint line=174 tid=47
+time="2021-05-28T09:34:52Z" level=debug msg="scale file /mnt/plots/driver9/plot-k32-2021-05-24-13-05-77ef7267bd3f6e3adf3924cf182b1db41b15d71b648cb7bd85fa3411c05dd579.plot qualities count 1 consume 85" file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:34:52Z" level=debug msg=scanner consume=86 file=loggers.go func=logging.CPrint line=174 tid=15
+time="2021-05-28T09:35:04Z" level=debug msg=scanner consume=0 file=loggers.go func=logging.CPrint line=174 tid=9
