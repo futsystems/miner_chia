@@ -26,6 +26,8 @@ if [ -d "/opt/src" ]; then
 		cd /opt/harvester/bin
 		git reset --hard
 		git pull
+		source venv/bin/activate
+                pip install -r requirement.txt
 		supervisorctl restart api.harvester
 	fi
 
