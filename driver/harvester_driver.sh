@@ -4,6 +4,9 @@ echo "Auto format disk and mout"
 
 device_list=$(ls /dev/)
 counter=0
+
+mkdir -p /mnt/plots
+
 for device in $device_list
  do
    if [[ $device == sd* ]]; then
