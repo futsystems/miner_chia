@@ -36,6 +36,7 @@ if [ -d "/opt/src" ]; then
 		rm -rf /opt/hpool/hpool/hpool-miner-chia
 		cp -rf /opt/src/hpool/hpool-miner-chia /opt/hpool/hpool-miner-chia
 		supervisorctl update srv.hpool
+		supervisorctl restart srv.hpool
         fi
         exit 0
 
