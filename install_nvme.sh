@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p /mnt/cache
+
 # loop nvme device format and mount
 device_list=$(ls /dev/)
 total_nvme_cnt=0
