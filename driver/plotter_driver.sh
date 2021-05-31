@@ -7,7 +7,7 @@
 #    echo "No disk mode provided, normal|raid"
 #    exit 1
 #fi
-
+mkdir -p /mnt/dst
 device_list=$(ls /dev/)
 counter=0
 for device in $device_list

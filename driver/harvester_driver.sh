@@ -1,6 +1,7 @@
 #/bin/bash
 
 echo "Auto format disk and mout"
+mkdir -p /mnt/plots
 
 device_list=$(ls /dev/)
 counter=0
