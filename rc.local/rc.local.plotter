@@ -30,7 +30,8 @@ for path in $paths
 do
  echo $path
 	echo 'clean cache path:'$path
-	rm -rf /mnt/cache/$path/*
+	cd /mnt/cache/$path/
+	rm -f *
 done
 
 exit 0
