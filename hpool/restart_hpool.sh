@@ -7,4 +7,5 @@ do
    echo 'restart srv.hpool'$hpidx	 
    supervisorctl restart srv.hpool$hpidx
    hpidx=$((hpidx+1))
+   sleep $[ ( $RANDOM % 20 )  + 10 ]
 done
