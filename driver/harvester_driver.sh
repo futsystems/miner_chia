@@ -34,8 +34,6 @@ do
  umount $mount_point
 done
 
-exit 0
-
 echo "----- 4. Auto format disk and mout -----"
 mkdir -p /mnt/plots
 
