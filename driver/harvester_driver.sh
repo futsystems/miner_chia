@@ -1,6 +1,42 @@
 #/bin/bash
 
-echo "Auto format disk and mout"
+echo '----- 1. kill all nc process -----'
+/usr/bin/killall -9 nc
+
+echo '----- 2. stop all hpool process -----'
+path_list=$(ls /mnt/plots)
+old_driver_num=0
+for path in $path_list
+do
+ old_driver_num=$((old_driver_num+1))
+done
+
+group=$[old_driver_num/15]
+flag2=$[old_driver_num%15]
+
+if [[ $flag2 -ne 0 ]]; then
+        group=$((group+1))
+fi
+
+echo 'there are '$old_driver_num' drivers, hpgroup:'$group
+idxmax=$((group-1))
+hpidx=0
+while [[ $hpidx -le $idxmax ]]
+do
+  supervisorctl stop srv.hpool$hpidx
+   hpidx=$((hpidx+1))
+done
+
+echo '----- 3. umount old mount pints -----'
+for path in $path_list
+do
+ mount_point='/mnt/plots/'$path
+ umount $mount_point
+done
+
+exit 0
+
+echo "----- 4. Auto format disk and mout -----"
 mkdir -p /mnt/plots
 
 device_list=$(ls /dev/)
@@ -25,7 +61,8 @@ for device in $device_list
 		
 		echo "clean bad plot files"
 		cd /mnt/plots/driver$counter
-		find . -name "*" -type f -size 0c | xargs -n 1 rm -f
+		find . -name "*" -type f -size -101G | xargs -n 1 rm -f
+		#find . -name "*" -type f -size 0c | xargs -n 1 rm -f
 
 		counter=$((counter+1))
       fi
