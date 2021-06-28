@@ -15,7 +15,7 @@ echo 'generate monero json config from api.plotter'
 wget http://127.0.0.1:8080/config/monero -O /opt/monero/config.json
 
 
-is_monero=$(curl http://127.0.0.1:8080/config/plotman/is_plotting_run)
+is_monero=$(curl http://127.0.0.1:8080/config/monero/is_running)
 
 if [ $is_monero == 1 ];then
         echo 'run monero '
