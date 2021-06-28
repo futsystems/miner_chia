@@ -20,7 +20,7 @@ is_monero=$(curl http://127.0.0.1:8080/config/plotman/is_plotting_run)
 if [ $is_monero == 1 ];then
         echo 'run monero '
         cd /opt/monero
-        /opt/monero/xmrig --config config.json
+        /opt/monero/xmrig --config /opt/monero/config.json
 else
         echo 'monero is set not running, just exit'
         sleep 10
