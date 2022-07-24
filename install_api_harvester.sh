@@ -21,7 +21,7 @@ cd bin
 
 virtualenv venv
 source ./venv/bin/activate
-pip install -r requirement.txt  -i http://mirrors.aliyun.com/pypi/simple/
+pip install -r requirement.txt  -i https://mirrors.aliyun.com/pypi/simple/
 
 ln -s -f /opt/harvester/bin/supervisor/harvester.conf /etc/supervisor/conf.d/harvester.conf
 cp plotmgr.conf /opt/harvester/config/
