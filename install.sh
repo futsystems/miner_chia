@@ -29,8 +29,8 @@ if [ $1 == 'plotter' ]; then
 	
 fi
 
-echo "======== Install Hpool========"
-./install_hpool.sh
+#echo "======== Install Hpool========"
+#./install_hpool.sh
 
 # Wait until api.plotter started and listens on port 8080.
 while [ -z "`netstat -tln | grep 8080`" ]; do
@@ -52,9 +52,9 @@ if [ $1 == 'plotter' ]; then
 	supervisorctl restart srv.plot
 fi
 
-echo "  -- hpool config"
-wget http://127.0.0.1:8080/config/hpool -O /opt/hpool/config.yaml
-supervisorctl restart srv.hpool
+#echo "  -- hpool config"
+#wget http://127.0.0.1:8080/config/hpool -O /opt/hpool/config.yaml
+#supervisorctl restart srv.hpool
 
 echo "======== Install Icinga2 ========"
 ./install_icinga2.sh
