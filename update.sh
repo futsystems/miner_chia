@@ -27,18 +27,11 @@ if [ -d "/opt/src" ]; then
 		git reset --hard
 		git pull
 		source venv/bin/activate
-                pip install -r requirement.txt
+         pip install -r requirement.txt
 		supervisorctl restart api.harvester
 	fi
 
-	if [ -d "/opt/hpool" ]; then
-                echo "======== Update Hpool ========"
-		rm -rf /opt/hpool/hpool/hpool-miner-chia
-		cp -rf /opt/src/hpool/hpool-miner-chia /opt/hpool/hpool-miner-chia
-		supervisorctl update srv.hpool
-		supervisorctl restart srv.hpool
-        fi
-        exit 0
+	exit 0
 
 else
 	echo "/opt/src do not exist, please install first"
