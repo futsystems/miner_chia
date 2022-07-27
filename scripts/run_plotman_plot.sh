@@ -10,7 +10,8 @@ echo 'api.plotter started.'
 
 
 echo 'generate plotman config from api.plotter'
-wget http://127.0.0.1:8080/config/plotman -O /root/.config/plotman/plotman.yaml
+mkdir -p /root/.config/plotman/
+wget http://127.0.0.1:8080/config/plotman?version=2 -O /root/.config/plotman/plotman.yaml
 
 
 is_plotting_run=$(curl http://127.0.0.1:8080/config/plotman/is_plotting_run)
