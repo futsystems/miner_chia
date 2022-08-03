@@ -1,9 +1,22 @@
 token: ""
 path:
-- /mnt/dst/00
-- /mnt/dst/01
+- /mnt/plots/driver0
+- /mnt/plots/driver1
+- /mnt/plots/driver2
+- /mnt/plots/driver3
+- /mnt/plots/driver4
+- /mnt/plots/driver5
+- /mnt/plots/driver6
+- /mnt/plots/driver7
+- /mnt/plots/driver8
+- /mnt/plots/driver9
+- /mnt/plots/driver10
+- /mnt/plots/driver11
+- /mnt/plots/driver12
+- /mnt/plots/driver13
+- /mnt/plots/driver14
 minerName: plot1
-apiKey: 80d7e99d-2459-4887-97d2-b5e6120f0a6e
+apiKey: chiapp00-409e-4809-b8cb-fbfef9e55b7c
 cachePath: ""
 deviceId: ""
 extraParams: {}
