@@ -23,4 +23,7 @@ ln -s /opt/src/supervisor/frpc.conf /etc/supervisor/conf.d/frpc.conf
 #echo "Plotter Numbner : [${number}]"
 #sed -i 's/\(^remote_port = \).*/\16001/' /opt/frp/frpc.ini
 
-echo "please change config for frp"
+
+supervisorctl reread
+supervisorctl remove srv.frpc
+supervisorctl add srv.frpc

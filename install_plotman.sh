@@ -25,4 +25,6 @@ else
   fi
 fi
 
-
+supervisorctl reread
+supervisorctl remove srv.plot
+supervisorctl add srv.plot
