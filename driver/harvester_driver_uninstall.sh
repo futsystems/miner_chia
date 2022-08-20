@@ -24,6 +24,7 @@ hpidx=0
 while [[ $hpidx -le $idxmax ]]
 do
   supervisorctl stop srv.hpool$hpidx
+  supervisorctl remove srv.hpool$hpidx
    hpidx=$((hpidx+1))
 done
 
@@ -34,3 +35,10 @@ do
  umount $mount_point
 done
 
+
+echo '----- 4. remove hpool supervisor config -----'
+rm -rf /etc/supervisor/conf.d/hpool*
+
+
+echo '----- 5. remove mount points-----'
+rm -rf /mnt/plots
