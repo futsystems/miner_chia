@@ -51,9 +51,12 @@ do
       supervisorctl reread
       supervisorctl add srv.hpool$hpidx
    else
-      echo 'superviosr:hpool'$hpidx' exist'	   
+      echo 'superviosr:hpool'$hpidx' exist readd service'	   
       wget "$url2" -O $conf_target
-      supervisorctl restart srv.hpool$hpidx 
+      supervisorctl stop srv.hpool$hpidx
+      supervisorctl remove srv.hpool$hpidx
+      supervisorctl reread
+      supervisorctl add srv.hpool$hpidx 
    fi
    hpidx=$((hpidx+1))
 done
