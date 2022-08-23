@@ -1,13 +1,22 @@
 #/bin/bash
 
+is_mounted() {
+    mount | awk -v DIR="$1" '{if ($3 == DIR) { exit 0}} ENDFILE{exit -1}'
+}
+
+
 
 echo '----- 2. stop all hpool process -----'
 
 path_list=$(ls /mnt/plots)
 old_driver_num=0
+
 for path in $path_list
 do
- old_driver_num=$((old_driver_num+1))
+	
+	if mount | grep -q $path; then
+		old_driver_num=$((old_driver_num+1))
+    fi
 done
 
 group=$[old_driver_num/15]
@@ -42,9 +51,7 @@ for device in $device_list
 		if mount | grep -q /dev/$device;
 		then
         	echo "======Disk"$counter":$device [O]======"
-			cd /mnt/plots/driver$counter
-			rm -rf readme
-			touch readme
+
 		else
 			echo "======Disk"$counter":$device [X]======"
         		echo 'disk size:' $disksizeT
@@ -52,14 +59,17 @@ for device in $device_list
          	blkid TYPE=ext4 /dev/$device || mkfs.ext4 -m 0 -T largefile4 -L plotdisk /dev/$device
 
 			#mount disk
-			mkdir -p /mnt/plots/driver$counter
-			#mount /dev/$device /mnt/plots/driver$counter
-			echo 'mount /dev/'$device.' /mnt/plots/driver'$counter
+			mkdir -p /mnt/plots/driver$old_driver_num
+			#mount /dev/$device /mnt/plots/driver$old_driver_num
+			echo 'mount /dev/'$device.' /mnt/plots/driver'$old_driver_num
 
 			echo "clean bad plot files"
 			cd /mnt/plots/driver$counter
 			find . -name "*" -type f -size -101G | xargs -n 1 rm -f
 			touch readme
+
+			old_driver_num=$((old_driver_num+1))
+
 		fi
 
 		counter=$((counter+1))
