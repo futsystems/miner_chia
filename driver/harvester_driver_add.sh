@@ -1,43 +1,23 @@
 #/bin/bash
 
-is_mounted() {
-    mount | awk -v DIR="$1" '{if ($3 == DIR) { exit 0}} ENDFILE{exit -1}'
-}
-
-
-
-echo '----- 2. stop all hpool process -----'
 
 path_list=$(ls /mnt/plots)
 old_driver_num=0
 
+# count driver count which is mounted
 for path in $path_list
 do
-	
 	if mount | grep -q $path; then
 		old_driver_num=$((old_driver_num+1))
     fi
 done
 
-group=$[old_driver_num/15]
-flag2=$[old_driver_num%15]
-
-if [[ $flag2 -ne 0 ]]; then
-        group=$((group+1))
-fi
 
 echo 'there are '$old_driver_num' drivers before'
 
 
-for path in $path_list
-do
- mount_point='/mnt/plots/'$path
- #echo 'mount point: '$mount_point
- #umount $mount_point
-done
 
-
-#list device
+#list device mount whcih is not mounted
 device_list=$(ls /dev/)
 counter=0
 
@@ -60,7 +40,7 @@ for device in $device_list
 
 			#mount disk
 			mkdir -p /mnt/plots/driver$old_driver_num
-			#mount /dev/$device /mnt/plots/driver$old_driver_num
+			mount /dev/$device /mnt/plots/driver$old_driver_num
 			echo 'mount /dev/'$device.' /mnt/plots/driver'$old_driver_num
 
 			echo "clean bad plot files"
