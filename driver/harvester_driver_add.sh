@@ -42,9 +42,12 @@ for device in $device_list
 		if mount | grep -q /dev/$device;
 		then
         	echo "======Disk"$counter":$device [O]======"
+			cd /mnt/plots/driver$counter
+			rm -rf readme
+			touch readme
 		else
 			echo "======Disk"$counter":$device [X]======"
-        	echo 'disk size:' $disksizeT
+        		echo 'disk size:' $disksizeT
 			# get disk information or format it as ext4
          	blkid TYPE=ext4 /dev/$device || mkfs.ext4 -m 0 -T largefile4 -L plotdisk /dev/$device
 
@@ -54,11 +57,9 @@ for device in $device_list
 			echo 'mount /dev/'$device.' /mnt/plots/driver'$counter
 
 			echo "clean bad plot files"
-			#cd /mnt/plots/driver$counter
+			cd /mnt/plots/driver$counter
 			find . -name "*" -type f -size -101G | xargs -n 1 rm -f
-
-
-	
+			touch readme
 		fi
 
 		counter=$((counter+1))
