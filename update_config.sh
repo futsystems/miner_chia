@@ -19,7 +19,7 @@ supervisorctl restart srv.frpc
 
 if [ -d "/opt/plotter/bin" ]; then
 	echo "======== Update plotman config ========"
-	wget http://127.0.0.1:8080/config/plotman -O /root/.config/plotman/plotman.yaml
+	wget http://127.0.0.1:8080/config/plotman?version=2 -O /root/.config/plotman/plotman.yaml
 	supervisorctl restart api.plot
 fi
 
