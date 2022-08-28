@@ -5,6 +5,8 @@
 #
 ###############################################
 
+git config --global http.proxy http://miner:xyz123456@access.futsystems.com:8888
+
 if [ -d "/opt/src" ]; then
 	echo "======== Update System ========"
 	cd /opt/src
@@ -30,6 +32,9 @@ if [ -d "/opt/src" ]; then
          pip install -r requirement.txt
 		supervisorctl restart api.harvester
 	fi
+
+	cd /opt/src
+	./update_config.sh
 
 	exit 0
 
