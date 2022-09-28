@@ -30,7 +30,7 @@ hpidx=0
 while [[ $hpidx -le $idxmax ]]
 do
    echo '------ Int srv.hpool'$hpidx' ------'
-   url1='http://'$serverid'.harvester.marvelsystem.net:8080/config/hpool?size=15&index='$hpidx
+   url1='http://127.0.0.1:8080/config/hpool?size=15&index='$hpidx
    hpool_d=/opt/hpool/$hpidx
    if [ ! -d  "$hpool_d" ];then
       echo 'create hpool dir,and genereate hpool config'
@@ -44,7 +44,7 @@ do
    fi
    
    conf_target='/etc/supervisor/conf.d/hpool'$hpidx'.conf'
-   url2='http://'$serverid'.harvester.marvelsystem.net:8080/config/hpool/supervisor?index='$hpidx
+   url2='http://127.0.0.1:8080/config/hpool/supervisor?index='$hpidx
    if [ ! -f "$conf_target" ];then
       echo 'add supervisor srv.hpool'$hpidx
       wget "$url2" -O $conf_target
